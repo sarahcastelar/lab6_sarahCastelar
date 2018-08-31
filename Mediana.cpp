@@ -6,7 +6,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-Mediana::Mediana(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, Persona* vectorTrabajadores, float pIngresos, float pEgresos, int pNumDep, string pRtn):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso,vectorTrabajadores){
+Mediana::Mediana(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, float pIngresos, float pEgresos, int pNumDep, string pRtn):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso){
     ingresos = pIngresos;
     egresos = pEgresos;
     numDepartamentos = pNumDep;

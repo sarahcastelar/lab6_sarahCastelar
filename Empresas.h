@@ -17,7 +17,7 @@ class Empresas{
         vector<Persona*> vectorTrabajadores; //lo puse personas pq pueden ser empleados o pasantes.
 
     public:
-        Empresas(string,string,string,int, Persona*);
+        Empresas(string,string,string,int);
 
         string getNombreEmpresa();
         string getFechaCreacion();
@@ -29,7 +29,8 @@ class Empresas{
         void setFechaCreacion(string);
         void setRubro(string);
         void setNumPermiso(int);
-        void setPersonas(Persona*);
+        void setPasantes(Pasantes*);
+        void setEmpleados(Empleados*);
 
         virtual void toString()=0;
         ~Empresas();

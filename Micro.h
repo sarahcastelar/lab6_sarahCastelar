@@ -9,7 +9,7 @@ class Micro : public Empresas{
         string dueno;
     
     public:
-        Micro(string, string, string, int, Persona*, string);
+        Micro(string, string, string, int, string);
 
         string getDueno();
         void setDueno(string);

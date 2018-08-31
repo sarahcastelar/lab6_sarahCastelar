@@ -6,7 +6,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-Micro::Micro(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, Persona* vectorTrabajadores, string pDueno):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso,vectorTrabajadores){
+Micro::Micro(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, string pDueno):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso){
     dueno = pDueno;
 }
 

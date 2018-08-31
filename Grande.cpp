@@ -6,7 +6,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-Grande::Grande(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, Persona* vectorTrabajadores, string pVice, Persona* vProveedores):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso,vectorTrabajadores){
+Grande::Grande(string nombreEmpresa, string fechaCreacion, string rubroEmpresa, int numPermiso, string pVice, Persona* vProveedores):Empresas(nombreEmpresa,fechaCreacion,rubroEmpresa,numPermiso){
     vicepresidente = pVice;
     vectorProveedores.push_back(vProveedores);
 }

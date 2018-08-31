@@ -12,7 +12,7 @@ class Mediana : public Empresas{
         string rtn;
     
     public:
-        Mediana(string, string, string, int, Persona*, float,float,int,string);
+        Mediana(string, string, string, int, float,float,int,string);
 
         float getIngresos();
         void setIngresos(float);

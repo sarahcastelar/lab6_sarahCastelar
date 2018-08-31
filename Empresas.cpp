@@ -1,11 +1,13 @@
 #include "Empresas.h"
+#include "Empleados.h"
+#include "Pasantes.h"
 
-Empresas::Empresas(string pNombreEmpresa, string pFecha, string pRubro, int pNumPermiso, Persona* vPersonas){
+Empresas::Empresas(string pNombreEmpresa, string pFecha, string pRubro, int pNumPermiso){
     nombreEmpresa = pNombreEmpresa;
     fechaCreacion = pFecha;
     rubroEmpresa = pRubro;
     numPermiso = pNumPermiso;
-    vectorTrabajadores.push_back(vPersonas);
+   // vectorTrabajadores.push_back(vPersonas);
 }
 
 string Empresas::getFechaCreacion(){
@@ -37,11 +39,11 @@ void Empresas::setNombreEmpresa(string name){
 }
 
 
-/*void Bodega::setIngredientes(Ingredientes* ingredientes){
-    vectorIngredientes.push_back(ingredientes);
-}*/
+void Empresas::setEmpleados(Empleados* personaas){
+    vectorTrabajadores.push_back(personaas);
+}
 
-void Empresas::setPersonas(Persona* personaas){
+void Empresas::setPasantes(Pasantes* personaas){
     vectorTrabajadores.push_back(personaas);
 }
 

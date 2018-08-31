@@ -14,7 +14,7 @@ class Grande : public Empresas{
         vector<Persona*> vectorProveedores;
     
     public:
-        Grande(string, string, string, int, Persona*, string, Persona*);
+        Grande(string, string, string, int, string, Persona*);
 
         string getVice();
         void setVice(string);
