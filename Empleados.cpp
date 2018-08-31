@@ -4,7 +4,7 @@
 using std::cout;
 using std::endl;
 
-Empleados::Empleados(string nombre, string id, int edad, string sexo, string nacionalidad, float pSalario, string pIdEmpleado):Persona(string nombre, string id, int edad, string sexo, string nacionalidad){
+Empleados::Empleados(string nombre, string id, int edad, string sexo, string nacionalidad, float pSalario, string pIdEmpleado):Persona( nombre,  id,  edad,  sexo,  nacionalidad){
     salario = pSalario;
     idEmpleado = pIdEmpleado;
 }

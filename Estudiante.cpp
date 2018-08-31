@@ -10,7 +10,7 @@ Estudiante::Estudiante(){
 
 }
 
-Estudiante::Estudiante(string nombre, string id, int edad, string sexo, string nacionalidad, float pIndice, string pCarrera, string pUniversidad, string pNumeroCuenta):Persona(string nombre, string id, int edad, string sexo, string nacionalidad){
+Estudiante::Estudiante(string nombre, string id, int edad, string sexo, string nacionalidad, float pIndice, string pCarrera, string pUniversidad, string pNumeroCuenta):Persona( nombre,  id,  edad,  sexo,  nacionalidad){
     indiceAcademico = pIndice;
     carrera = pCarrera;
     universidad = pUniversidad;
@@ -54,6 +54,6 @@ void Estudiante::toString(){
     <<numeroCuenta<<"Indice Academico: "<<indiceAcademico;
 }
 
-Estudiante::~Estudiante{
+Estudiante::~Estudiante(){
     
 }
