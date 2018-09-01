@@ -1,5 +1,5 @@
-main.o:	Eliminados.o Empleados.o Empresas.o Estudiante.o Grande.o Mediana.o Micro.o Pasantes.o Persona.o
-	g++ Eliminados.o Empleados.o Empresas.o Estudiante.o Grande.o Mediana.o Micro.o Pasantes.o Persona.o -o main
+main:	Main.o Eliminados.o Empleados.o Empresas.o Estudiante.o Grande.o Mediana.o Micro.o Pasantes.o Persona.o 
+	g++ Main.o Eliminados.o Empleados.o Empresas.o Estudiante.o Grande.o Mediana.o Micro.o Pasantes.o Persona.o -o main
 	rm *.o
 
 main.o:	Main.cpp Eliminados.h Empleados.h Empresas.h Estudiante.h Grande.h Mediana.h Micro.h Pasantes.h Persona.h

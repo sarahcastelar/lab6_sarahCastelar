@@ -1,6 +1,8 @@
 #ifndef EMPRESAS_H
 #define EMPRESAS_H
 #include "Persona.h"
+#include "Pasantes.h"
+#include "Empleados.h"
 
 #include <string>
 using std::string;

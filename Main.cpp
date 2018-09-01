@@ -36,14 +36,17 @@ vector<Empleados*> vectorEmpleados;
 
 vector<Persona*> vectorEliminados;
 
-
+void Admin();
+void crearEstudiantes();
+void crearMicro();
+void EliminarGente();
 
 
 
 int menu (){
    int opcion = 0;
    while (true){
-  	cout<<"-----BIENVENIDO-------" << endl
+  	cout<<"\n \n-----BIENVENIDO-------" << endl
 	<< "1. Modo Admin (agregar estudiantes a empresas)" << endl
 	<< "2. Crear Estudiantes" << endl
     << "3. Crear MicroEmpresas"<<endl
@@ -66,7 +69,10 @@ int main (){
 	while (opcion != 8){
 		switch (opcion = menu()){
 			case 1:
-				Admin();
+                if (vectorEmpresas.size()!=0 || vectorEmpleados.size()!=0)
+				    Admin();
+                else 
+                    cout<<"Tiene que agregar empresas y estudiantes primero."<<endl;
 			break;
 
 			case 2:
@@ -78,21 +84,24 @@ int main (){
             break;
 
             case 4:
-
+                cout<<"No lo termine :("<<endl;
             break;
 
             case 5:
-
+                EliminarGente();
             break;
 
             case 6:
                 for (int i = 0; i < vectorEmpresas.size(); i++){
+                    cout<<"Info Empresa #"<<i<<endl;
                     vectorEmpresas[i]->toString();
                 }
             break;
 
             case 7:
+                
                 for (int i = 0; i < vectorEliminados.size(); i++){
+                    cout<<"Info Eliminado: #"<<i<<endl;
                     vectorEliminados[i]->toString();
                 }
             break;
@@ -109,7 +118,7 @@ void Admin(){
     string tempCarrera="";
     int c = 0, numEstudiante =-1, numEmpresa=-1,trabajador =-1;
 
-    for(int i = 0; i < vectorEstudiantes.size(); i++){
+   for(int i = 0; i < vectorEstudiantes.size(); i++){
         tempCarrera = vectorEstudiantes[i]->getCarrera();
         for (int j= 0; j < vectorEstudiantes.size(); j++){
             if (vectorEstudiantes[j]->getCarrera() == tempCarrera){
@@ -124,7 +133,8 @@ void Admin(){
 
     //escoger empresa a meterlo
     for(int i = 0; i < vectorEmpresas.size(); i++){
-        cout<<i<<". "<<vectorEmpresas[i]->getNombreEmpresa<<endl;
+        cout<<i<<". "<<vectorEmpresas[i]->getNombreEmpresa()<<endl;
+        cout<<"hola";
     }
     cout<<"Que numero de empresa escoge?"<<endl;
     cin>>numEmpresa;
@@ -237,7 +247,7 @@ void EliminarGente(){
     //escoger empresa de donde eliminar
     int numEmpresa, trabajador, numEmpleado;
     for(int i = 0; i < vectorEmpresas.size(); i++){
-        cout<<i<<". "<<vectorEmpresas[i]->getNombreEmpresa<<endl;
+        cout<<i<<". "<<vectorEmpresas[i]->getNombreEmpresa()<<endl;
     }
     cout<<"Que numero de empresa escoge?"<<endl;
     cin>>numEmpresa;
@@ -257,7 +267,8 @@ void EliminarGente(){
         nacionalidad = vectorEmpresas[numEmpleado]->getPersonas(numEmpleado)->getNacionalidad();
         edad = vectorEmpresas[numEmpleado]->getPersonas(numEmpleado)->getEdad();
 
-        vectorEliminados.push_back(new Eliminados(nombre, id, edad, sexo, nacionalidad));
+     vectorEliminados.push_back(new Eliminados(nombre, id, edad, sexo, nacionalidad));
     vectorEmpresas.erase(begin(vectorEmpresas)+numEmpleado);
+    cout<<"Empleado/Pasante eliminado correctamente."<<endl;
 
 }
