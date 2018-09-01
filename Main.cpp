@@ -108,6 +108,31 @@ int main (){
 
 		}
 	 }
+
+    for(int i = 0; i < vectorEstudiantes.size(); i++){
+        delete vectorEstudiantes[i];
+    }
+
+    for(int i = 0; i < vectorCarreras.size(); i++){
+        delete vectorCarreras[i];
+    }
+
+    for(int i = 0; i < vectorEmpleados.size(); i++){
+        delete vectorEmpleados[i];
+    }
+
+    for(int i = 0; i < vectorEmpresas.size(); i++){
+        delete vectorEmpresas[i];
+    }
+
+    for(int i = 0; i < vectorPersonas.size(); i++){
+        delete vectorPersonas[i];
+    }
+    for(int i = 0; i < vectorPasantes.size(); i++){
+        delete vectorPasantes[i];
+    }
+
+    
 	return 0;
 };
 
@@ -179,15 +204,6 @@ void Admin(){
     //ahora llamar al metodo que valide cuantos empleados tiene la empresa.. si es mas de 5 que crezca y asi
 }
 
-
-
-//string pNombre, string pId, int pEdad, string pSexo, string pNacionalidad
-/*
-indiceAcademico = pIndice;
-    carrera = pCarrera;
-    universidad = pUniversidad;
-    numeroCuenta 
-*/
 void crearEstudiantes(){
     string nombre, id, sexo, nacionalidad, carrera, universidad, numeroCuenta;
     int edad, indice;
